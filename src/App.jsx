@@ -1,6 +1,7 @@
-import { useState } from 'react'
+import { useState } from 'react';
 import BirthDateForm from './BirthDateForm'
-import AgeDisplay from './AgeDisplay'
+import AgeDisplay from './AgeDisplay';
+import './App.css';
 
 function App() {
   const [day, setDay] = useState('')
@@ -8,13 +9,14 @@ function App() {
   const [year, setYear] = useState('')
 
   return (
-    <>
+    <div className='App'>
       <BirthDateForm day={day} month={month} year={year} setDay={setDay} setMonth={setMonth} setYear={setYear} />
-      {day}
-      {month}
-      {year}
+      <div className="IconSpacer">
+       
+        <img src="../assets/images/icon-arrow.svg" className="Icon"/>
+      </div>
       <AgeDisplay />
-    </>
+    </div>
   )
 }
 

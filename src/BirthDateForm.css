@@ -1,10 +1,28 @@
 .BirthDateForm{
     display: flex;
+    /* justify-content: space-between; */
+}
+.form__label{
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    text-transform: uppercase;
+    font-size:12px;
+    letter-spacing: 2px;
+    color:#716F6F;
+}
 
+.form__input{
+    width:70%;
+    padding:1rem;
+    border-style: solid;
+    border-radius: .5rem;
+    border-color: #DCDCDC;
 }
 
 .form__group{
     display: flex;
     flex-direction: column;
     margin-right: 1rem;
+    width:30%;
 }
