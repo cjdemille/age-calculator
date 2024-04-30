@@ -1,0 +1,11 @@
+.AgeDisplay{
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+    font-size:56px;
+    letter-spacing: -2%;
+}
+
+.Result{
+    color:#854DFF;
+}

@@ -1,5 +1,6 @@
-export default function BirthDateForm({ day, setDay, month, setMonth, year, setYear }) {
+import './BirthDateForm.css'
 
+export default function BirthDateForm({ day, setDay, month, setMonth, year, setYear }) {
 
     const dayError = (
         (month == 2 && day > 28) ||
@@ -7,7 +8,7 @@ export default function BirthDateForm({ day, setDay, month, setMonth, year, setY
         day > 31
     )
     return (
-        <form action="#">
+        <form action="#" className='BirthDateForm'>
             <div className="form__group">
                 <label htmlFor="day" className="form__label">Day</label>
                 <input type="text" id="day" name="day" className={dayError ? "form__input error" : "form__input"} value={day} onChange={(e) => setDay(e.target.value)} maxLength={2} />
@@ -20,8 +21,6 @@ export default function BirthDateForm({ day, setDay, month, setMonth, year, setY
                 <label htmlFor="year" className="form__label">Year</label>
                 <input type="text" id="year" name="year" className={year > 2023 ? "form__input error" : "form__input"} value={year} onChange={(e) => setYear(e.target.value)} maxLength={4} />
             </div>
-
-
         </form>
     )
 }

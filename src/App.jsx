@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import BirthDateForm from './BirthDateForm'
 import AgeDisplay from './AgeDisplay'
-import './App.css'
 
 function App() {
   const [day, setDay] = useState('')
