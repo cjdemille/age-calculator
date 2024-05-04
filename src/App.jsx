@@ -11,10 +11,9 @@ function App() {
   return (
     <div className='App'>
       <BirthDateForm day={day} month={month} year={year} setDay={setDay} setMonth={setMonth} setYear={setYear} />
-      <div className="IconSpacer">
-       
-        <img src="../assets/images/icon-arrow.svg" className="Icon"/>
-      </div>
+      {day}
+      {month}
+      {year}
       <AgeDisplay />
     </div>
   )
