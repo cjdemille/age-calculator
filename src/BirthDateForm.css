@@ -35,8 +35,14 @@
     margin:2rem auto;
     position: relative;
     z-index: 5;
+    transition:all .2s
 }
 
+
+.Icon:active{
+    background-color: black;
+
+}
 button{
     border:none;
     background-color: transparent;
@@ -65,4 +71,11 @@ button::after{
 
 .error{
     border:1px solid red;
+}
+
+@media screen and (min-width:1140px) {
+    .Icon{
+        position:relative;
+        margin-left:88%;
+    }
 }
