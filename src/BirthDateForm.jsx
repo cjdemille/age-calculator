@@ -1,15 +1,22 @@
 import './BirthDateForm.css'
 
-export default function BirthDateForm({ day, setDay, month, setMonth, year, setYear }) {
+export default function BirthDateForm({ day, setDay, month, setMonth, year, setYear , dob, setDob, calculateAge}) {
 
     const dayError = (
         (month == 2 && day > 28) ||
         ((month == 4 || month == 6 || month == 9 || month == 11) && day > 30) ||
         day > 31
     )
+
+    const submit= (e) => {
+        e.preventDefault(); 
+        setDob(`${year}-${month}-${day}`)
+        console.log(dob);
+        calculateAge(dob);
+    }
     
     return (
-        <form action="#" className='BirthDateForm'>
+        <form action="#" className='BirthDateForm' onSubmit={submit}>
             <div className="BirthDateForm__row">
             <div className="form__group">
                 <label htmlFor="day" className="form__label">Day</label>
