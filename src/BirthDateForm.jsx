@@ -1,6 +1,14 @@
 import './BirthDateForm.css'
 
+<<<<<<< HEAD
 export default function BirthDateForm({ day, setDay, month, setMonth, year, setYear , dob, setDob, calculateAge}) {
+=======
+<<<<<<< HEAD
+export default function BirthDateForm({ day, setDay, month, setMonth, year, setYear , calculateAge}) {
+=======
+export default function BirthDateForm({ day, setDay, month, setMonth, year, setYear , dob, setDob, calculateAge}) {
+>>>>>>> 6b0897f (create age calculator function)
+>>>>>>> 9ceb9ed
 
     const dayError = (
         (month == 2 && day > 28) ||
@@ -8,6 +16,7 @@ export default function BirthDateForm({ day, setDay, month, setMonth, year, setY
         day > 31
     )
 
+<<<<<<< HEAD
     const submit= (e) => {
         e.preventDefault(); 
         setDob(`${year}-${month}-${day}`)
@@ -17,6 +26,24 @@ export default function BirthDateForm({ day, setDay, month, setMonth, year, setY
     
     return (
         <form action="#" className='BirthDateForm' onSubmit={submit}>
+=======
+<<<<<<< HEAD
+
+    
+    return (
+        <form action="#" className='BirthDateForm' onSubmit={(e) => calculateAge(e)}>
+=======
+    const submit= (e) => {
+        e.preventDefault(); 
+        setDob(`${year}-${month}-${day}`)
+        console.log(dob);
+        calculateAge(dob);
+    }
+    
+    return (
+        <form action="#" className='BirthDateForm' onSubmit={submit}>
+>>>>>>> 6b0897f (create age calculator function)
+>>>>>>> 9ceb9ed
             <div className="BirthDateForm__row">
             <div className="form__group">
                 <label htmlFor="day" className="form__label">Day</label>
