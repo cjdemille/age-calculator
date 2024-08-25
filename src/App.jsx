@@ -13,7 +13,6 @@ function App() {
   const [dispMonth, setDispMonth] = useState("--")
   const [dispDay, setDispDay] = useState("--")
 
-
   
   const calculateAge = (dob) =>{
     dob = dob.toString();
